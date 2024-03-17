@@ -17,22 +17,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
        playButton = findViewById(R.id.playButton);
        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.stuff);
-       playButton.setOnClickListener(       );
-
-
-
+       playButton.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               if (playButton.getText().equals("Play")){
+                   mediaPlayer.start();
+                   playButton.setText("Pause");
+               } else if(playButton.getText().equals("Pause")){
+                   mediaPlayer.pause();
+                   playButton.setText("Play");
+               }
+           }
+       });
     }
-
-    public void play(View view) {
-        mediaPlayer.start();
-        if (playButton.getText() == "Play"){
-            mediaPlayer.start();
-            playButton.setText("Pause");
-        } else {
-            mediaPlayer.pause();
-        }
-
-    }
-
-
 }
