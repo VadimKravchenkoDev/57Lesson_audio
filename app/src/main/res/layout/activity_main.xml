@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/playButton"
+        android:id="@+id/skipLeft"
         android:layout_width="84dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
@@ -19,6 +19,15 @@
         app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
+
+
+    <ImageButton
+        android:id="@+id/skipRight"
+        android:layout_width="74dp"
+        android:layout_height="83dp"
+        android:src="@android:drawable/ic_media_next"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
 
     <SeekBar
         android:id="@+id/volumeSeekBar"
