@@ -4,29 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:contextClickable="false"
+    android:textAlignment="textEnd"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="24dp"
         android:text="Play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
 
     <SeekBar
         android:id="@+id/volumeSeekBar"
-        android:thumbTint="@color/dark_orange"
-        android:progressTint="@color/dark_orange"
         android:layout_width="237dp"
         android:layout_height="24dp"
-        android:layout_marginTop="16dp"
+        android:progressTint="@color/dark_orange"
+        android:thumbTint="@color/dark_orange"
         app:layout_constraintEnd_toEndOf="@+id/playButton"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/playButton"
-        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+        tools:layout_editor_absoluteY="420dp" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -43,13 +45,18 @@
         app:layout_constraintVertical_bias="0.911"
         app:srcCompat="@drawable/circle" />
 
-    <ImageView
-        android:id="@+id/imagePlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:tint="@color/dark_orange"
-        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar"
-        app:srcCompat="@android:drawable/ic_media_play"
-        tools:layout_editor_absoluteX="189dp" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="72dp"
+        android:layout_height="50dp"
+        android:background="@color/black_blue"
+        android:gravity="center"
+        android:text="My Song"
+        android:textAlignment="center"
+        android:textColor="@color/dark_orange"
+        app:layout_constraintEnd_toEndOf="@+id/volumeSeekBar"
+        app:layout_constraintStart_toStartOf="@+id/volumeSeekBar"
+        tools:layout_editor_absoluteY="318dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
