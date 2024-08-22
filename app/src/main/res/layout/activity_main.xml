@@ -9,16 +9,7 @@
     android:textAlignment="textEnd"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/skipLeftButton"
-        android:layout_width="84dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/skip_left"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
+
 
 
     <SeekBar
@@ -31,22 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="420dp" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="83dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="157dp"
-        android:background="@drawable/circle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911"
-        app:srcCompat="@drawable/circle" />
-
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewSong"
         android:layout_width="72dp"
         android:layout_height="50dp"
         android:background="@color/black_blue"
@@ -58,21 +35,89 @@
         app:layout_constraintStart_toStartOf="@+id/volumeSeekBar"
         tools:layout_editor_absoluteY="318dp" />
 
+    <ImageView
+        android:id="@+id/skipLeftBackground"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
+
     <ImageButton
-        android:id="@+id/skipRightButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/skip_right"
-        tools:layout_editor_absoluteX="283dp"
-        tools:layout_editor_absoluteY="470dp" />
+        android:id="@+id/skipLeftButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/skip_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
+
+    <ImageView
+        android:id="@+id/playBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle"
+        app:layout_constraintStart_toEndOf="@+id/skipLeftButton"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
 
     <ImageButton
         android:id="@+id/playButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/play"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="466dp" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/play"
+        app:layout_constraintStart_toEndOf="@+id/skipLeftButton"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
+
+    <ImageView
+        android:id="@+id/skipRightBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle"
+        app:layout_constraintStart_toEndOf="@+id/playButton"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
+
+
+    <ImageButton
+        android:id="@+id/skipRightButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/skip_right"
+        app:layout_constraintStart_toEndOf="@+id/playButton"
+        app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar" />
+
+    <ImageView
+        android:id="@+id/clefBack"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSong"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSong"
+        app:layout_constraintStart_toStartOf="@+id/textViewSong"
+        app:srcCompat="@drawable/clef" />
+
+    <ImageView
+        android:id="@+id/clef"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSong"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSong"
+        app:layout_constraintStart_toStartOf="@+id/textViewSong"
+        app:srcCompat="@drawable/clef" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
