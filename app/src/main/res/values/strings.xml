@@ -1,3 +1,11 @@
-<resources>
-    <string name="app_name">57Lesson_audio</string>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- Base application theme. -->
+<style name="Base.Theme.57Lesson_audio" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="colorPrimary">@color/dark_orange</item>
+    <item name="colorPrimaryDark">@color/black_blue</item>
+    <item name="colorAccent">@color/dark_orange</item>
+</style>
+
+<style name="Theme.57Lesson_audio" parent="Base.Theme.57Lesson_audio" />
 </resources>
